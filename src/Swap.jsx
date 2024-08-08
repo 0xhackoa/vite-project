@@ -55,7 +55,7 @@ async function subscribeToOrders () {
   const garden = new GardenJS(orderbook, wallets);
 
   const sendAmount = 0.0001 * 1e8;
-  const receiveAmount = (1) * sendAmount;
+  const receiveAmount = (1 - 0.3 / 100) * sendAmount;
 
   const orderId = await garden.swap(
     Assets.bitcoin_testnet.BTC,
